@@ -66,10 +66,15 @@
         © 2026 ImgToLink. All rights reserved.
     </footer>
 
-    <script>
-        const SUPABASE_URL = 'https://zwtccjpxogscafxyewnn.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp3dGNjanB4b2dzY2FmeHlld25uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg0MjE3NzEsImV4cCI6MjEwMzk5Nzc3MX0.6VJcQirTLbi_NeITHa7gEDgpiwrKf90yjiRficjA8LU';
-        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  <!-- Supabase CDN Script Link -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  const SUPABASE_URL = 'https://zwtccjoxogscafkyewmn.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp3dGNjanB4b2dzY2FmeHlld25uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg0MjE3NzEsImV4cCI6MjEwMzk5Nzc3MX0.6VJcQirTLbi_NeITHa7gEDgpiwrKf90yjiRficjA8LU';
+
+  // Correct CDN Initialization
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         async function handleFileSelect(e) {
             const file = e.target.files[0];
